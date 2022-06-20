@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>远程激活</title>
+    <link rel="stylesheet" type="text/css" href="static/button.css"/>
+</head>
+<body>
+<form action="/" method="post">
+    {% csrf_token %}
+    {% for client in clients %}
+    <button class="bttn-unite bttn-lg bttn-primary" name="wake_mac" value={{ client.mac }}>{{ client.name }}</button>
+    {% endfor %}
+</form>
+</body>
+</html>
