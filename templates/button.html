@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>远程激活</title>
-    <link rel="stylesheet" type="text/css" href="static/button.css"/>
+    <style type="text/css">
+    body {
+        background-color: #404040;
+    }
+    .form-main {
+        text-align: center;
+    }
+    .bttn-primary {
+        background-color: #404040;
+        color: #FFFFFF;
+        padding: 88px 0px;
+        margin: 20px 80px;
+        text-align: center;
+        display: inline-block;
+        font-size: 60px;
+        border-width: 20px;
+        border-color: #FFFFFF;
+        border-radius: 50px;
+        width: 45%;
+    }
+    </style>
 </head>
 <body>
-<form action="/" method="post">
+<form class="form-main" action="/" method="post">
     {% csrf_token %}
     {% for client in clients %}
-    <button class="bttn-unite bttn-lg bttn-primary" name="wake_mac" value={{ client.mac }}>{{ client.name }}</button>
+    <button class="bttn-primary" name="wake_mac" value={{ client.mac }}>{{ client.name }}</button>
     {% endfor %}
 </form>
 </body>
