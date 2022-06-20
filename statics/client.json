@@ -1,14 +1,14 @@
 [
   {
-    "name": "卧室台式机",
-    "mac": "1C697ACA5210"
+    "name": "bedroom",
+    "mac": "1C697ACA5211"
   },
   {
-    "name": "书房台式机",
+    "name": "study",
     "mac": "2C697ACA5210"
   },
   {
-    "name": "客厅笔记本",
+    "name": "living room",
     "mac": "3C697ACA5210"
   }
 ]
